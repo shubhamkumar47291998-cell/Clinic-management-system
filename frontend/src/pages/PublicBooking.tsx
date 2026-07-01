@@ -1,10 +1,10 @@
-import React, { useEffect, useState, useCallback, useRef } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { useParams } from 'react-router-dom';
 import { supabase } from '../lib/supabaseClient';
 import {
   User, Phone, Calendar, Clock, Check, AlertCircle, Heart, ArrowRight,
   ArrowLeft, CreditCard, Smartphone, Building2, Banknote, Download,
-  Printer, ChevronLeft, ChevronRight, X, FileText, MapPin, Shield
+  Printer, ChevronLeft, ChevronRight, FileText, Shield
 } from 'lucide-react';
 import { AuthInput } from '../components/auth/AuthInput';
 import { AuthButton } from '../components/auth/AuthButton';
