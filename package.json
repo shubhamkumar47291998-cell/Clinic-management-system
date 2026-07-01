@@ -1,0 +1,33 @@
+{
+  "name": "clinic-management-system",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Clinic Management SaaS - Root Monorepo Configuration",
+  "workspaces": [
+    "frontend"
+  ],
+  "scripts": {
+    "install:all": "npm install --workspaces --include-workspace-root",
+    "dev": "npm run dev --prefix frontend",
+    "build": "npm run build --prefix frontend",
+    "lint": "npm run lint --prefix frontend",
+    "test": "npm run test --prefix frontend",
+    "supabase:login": "npx supabase login --workdir backend",
+    "supabase:status": "npx supabase status --workdir backend",
+    "supabase:link": "npx supabase link --workdir backend",
+    "supabase:pull": "npx supabase db pull --workdir backend",
+    "supabase:push": "npx supabase db push --workdir backend",
+    "supabase:migration": "npx supabase migration new --workdir backend",
+    "supabase:start": "npx supabase start --workdir backend",
+    "supabase:stop": "npx supabase stop --workdir backend",
+    "supabase:reset": "npx supabase db reset --workdir backend",
+    "supabase:gen-types": "npx supabase gen types typescript --local --workdir backend > frontend/src/types/supabase.ts",
+    "dev:all": "concurrently \"npm run supabase:start\" \"npm run dev\""
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.3"
+  },
+  "dependencies": {
+    "pg": "^8.22.0"
+  }
+}

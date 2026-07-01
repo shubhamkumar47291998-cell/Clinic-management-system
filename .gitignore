@@ -8,3 +8,7 @@ dist/
 .env.*.local
 .supabase/
 *.log
+
+# Exclude backend helper scripts containing database/supabase credentials
+backend/*.js
+backend/supabase/seed.js

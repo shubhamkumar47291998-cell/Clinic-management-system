@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+Allow: /about
+Allow: /doctors
+Allow: /departments
+Allow: /services
+Allow: /emergency
+Allow: /blog
+Allow: /contact
+Allow: /appointment
+
+# Disallow authenticated portal paths
+Disallow: /login
+Disallow: /reset-password
+Disallow: /booking/*
+
+Sitemap: https://aurahealthclinic.example.com/sitemap.xml
